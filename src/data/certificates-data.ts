@@ -5,7 +5,7 @@ export const certificatesData: DataI[] = [
         "id": "1",
         "name": "",
         "description": "",
-        "images": ["/certificates/cs50cy.png"]
+        "images": ["/build/certificates/cs50cy.png"]
     },
     {
         "id": "2",
