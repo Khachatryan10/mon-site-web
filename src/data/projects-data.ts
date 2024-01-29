@@ -52,7 +52,7 @@ export const projectsData: DataI[] = [
         "id": "4",
         "name": "Video Sharing Web App",
         "description": "This web application is created using HTML, CSS, JavaScript, and Python (Django).",
-        "images": ["./VideoSharingWebApp/vidAppimg1.png",
+        "images": ["./videoSharingWebApp/vidAppimg1.png",
                     "./videoSharingWebApp/vidSharingAppImg2.png",
                     "./videoSharingWebApp/vidSharingAppImg3.png",
                     "./videoSharingWebApp/vidSharingAppImg4.png",

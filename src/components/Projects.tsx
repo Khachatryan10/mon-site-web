@@ -35,7 +35,7 @@ export default function Projects() {
                     <h3 className="title">
                         Video Sharing Web App
                     </h3>
-                    <img src="./VideoSharingWebApp/vidAppimg1.png" alt="Video sharing web app" className="imgs"/>
+                    <img src="./videoSharingWebApp/vidAppimg1.png" alt="Video sharing web app" className="imgs"/>
                 </Link>
             </div>
 
