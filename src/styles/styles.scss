@@ -61,7 +61,7 @@ a {
 .nav {
     display: flex;
     justify-content: center;
-    height: 35px;
+    height: 50px;
 
         ul {
             line-height: 5px;
@@ -172,6 +172,7 @@ a {
     &__imgs {
         width: 75%;
         display: block;
+        min-width: 300px;
         margin: 15px;
         margin-left: auto;
         margin-right: auto;
