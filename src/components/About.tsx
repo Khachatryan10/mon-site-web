@@ -7,7 +7,7 @@ export default function About() {
             <h2 className="aboutDiv__h2">Typescript and Python Developer</h2>
             <div className="aboutDiv__div">
                 <p>
-                    Hello World, my name is Khachatur and my family name is Khachatryan, i live in France, and i'm a freelancer.
+                    Hello World, my name is Khachatur and my family name is Khachatryan and i live in France.
                     I started learning programming from the end of 2021 and now I have 7 certificates from CS50 and FreeCodeCamp and 5 personal projects,
                     3 of which are Full Stack. I have experience with the following technologies Python, Javascript,
                     Typescript, HTML, CSS, Sass, React, Redux, Django, SQL, basics of Git, basics of D3.js, npm with which i can work professionally
