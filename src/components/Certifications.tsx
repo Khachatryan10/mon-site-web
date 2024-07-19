@@ -9,7 +9,7 @@ export default function Certifications() {
                 <h3 className="title">
                     Machine Learning, Maths & Ethics: Hands-on
                 </h3>
-                <img src="./certificates/Polimi.png" alt="Machine Learning, Maths & Ethics: Hands-on Certificate" className="imgs"/>
+                <img src="./certificates/polimi.png" alt="Machine Learning, Maths & Ethics: Hands-on Certificate" className="imgs"/>
             </Link>
         </div> 
 
