@@ -8,7 +8,7 @@ export default function About() {
             <div className="aboutDiv__div">
                 <p>
                     Hello World, my name is Khachatur and my family name is Khachatryan and i live in France.
-                    I started learning programming from the end of 2021 and now I have 8 certificates from CS50, FreeCodeCamp and Polimi Open Knowledge.I also have 5 personal projects,
+                    I started learning programming from the end of 2021 and now I have 8 certificates from CS50, FreeCodeCamp and Polimi Open Knowledge. I also have 5 personal projects,
                     3 of which are Full Stack. I have experience with the following technologies Python, Javascript,
                     Typescript, HTML, CSS, Sass, React, Redux, Django, SQL, basics of Git, basics of D3.js, npm with which i can work professionally.
                     I currently learn React Native with which i have a project on this website, however it's not fully completed yet.
