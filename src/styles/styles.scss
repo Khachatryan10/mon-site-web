@@ -114,9 +114,6 @@ a {
         transition: 0.20s;
     }
 
-    .div:hover {
-        background-color:rgb(255, 9, 132);
-    }
 
     .divPrgMobile {
         @extend .div;
@@ -206,13 +203,16 @@ a {
 
 .aboutDiv {
     width: 100%;
-    margin-top: 18vh;
+    // margin-top: 0vh;
     text-align: center;
 
 
-    &__h1, &__h2 {
+    &__h1{
+        margin-top: 15vh;
         color: $main-color;
-        font-size: 75px;
+        text-align: center;
+        margin-left: 15px;
+        font-size: 45px;
         text-shadow: 1px 8px 0 rgb(0, 0, 0);
         user-select: none;
     }
@@ -224,6 +224,7 @@ a {
         min-width: none;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 5vh;
 
         p {
             color: rgb(205, 205, 205);
@@ -232,11 +233,55 @@ a {
     }
 }
 
+
+#container {
+    user-select: none;
+    width: 45vw;
+    height: 45vw;
+    max-width: 800px;
+    max-height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -65px;
+    position: relative;
+    perspective: 2000px;
+    cursor: grab;
+    z-index: 1; 
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        width: 100vw;
+        height: 100vw;
+        margin: 10px auto;
+    }
+}
+
+#text-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+}
+
+.floating-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    font-size: clamp(16px, 2vw, 24px); 
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+}
+
 @media only screen and (max-width: 875px) {
     .aboutDiv {
 
-        &__h1,
-        &__h2 {
+        &__h1 {
             color: $main-color;
             font-size: 45px;
             text-shadow: 1px 8px 0 rgb(0, 0, 0);
@@ -248,9 +293,7 @@ a {
 @media only screen and (max-width: 480px) {
     .aboutDiv {
 
-        &__h1,
-
-        &__h2 {
+        &__h1 {
             color: $main-color;
             font-size: 20px;
             text-shadow: 1px 4px 0 rgb(0, 0, 0);
