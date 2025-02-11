@@ -7,6 +7,15 @@ export default function Certifications() {
         <div className="div">
             <Link to={"1"}>
                 <h3 className="title">
+                    Machine Learning, Maths & Ethics: Hands-on
+                </h3>
+                <img src="./certificates/polimi.png" alt="Machine Learning, Maths & Ethics: Hands-on Certificate" className="imgs"/>
+            </Link>
+        </div> 
+
+        <div className="div">
+            <Link to={"2"}>
+                <h3 className="title">
                     CS50 Cybersecurity
                 </h3>
                 <img src="./certificates/cs50cy.png" alt="CS50 Cybersecurity certificate" className="imgs"/>
@@ -14,7 +23,7 @@ export default function Certifications() {
         </div> 
 
         <div className="div">
-            <Link to={"2"}>
+            <Link to={"3"}>
                 <h3 className="title">
                     CS50 SQL
                 </h3>
@@ -23,7 +32,7 @@ export default function Certifications() {
         </div>
         
         <div className="div">
-            <Link to={"3"}>
+            <Link to={"4"}>
                 <h3 className="title">
                     CS50W
                 </h3>
@@ -32,7 +41,7 @@ export default function Certifications() {
         </div>
             
         <div className="div">
-            <Link to={"4"}>
+            <Link to={"5"}>
                 <h3 className="title">
                     CS50T
                 </h3>
@@ -41,7 +50,7 @@ export default function Certifications() {
         </div>
 
         <div className="div">
-            <Link to={"5"}>
+            <Link to={"6"}>
                 <h3 className="title">
                     CS50X
                 </h3>
@@ -50,7 +59,7 @@ export default function Certifications() {
         </div>
 
         <div className="div">
-            <Link to={"6"}>
+            <Link to={"7"}>
                 <h3 className="title">
                     FCC JavaScript DSA
                 </h3>
@@ -59,7 +68,7 @@ export default function Certifications() {
         </div>  
         
         <div className="div">
-            <Link to={"7"}>
+            <Link to={"8"}>
                 <h3 className="title">
                     FCC RWD
                 </h3>
