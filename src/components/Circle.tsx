@@ -1,14 +1,11 @@
 import { useRef, useEffect, useState } from 'react';
 
 export default function Circle(): JSX.Element {
-  // Refs for the container and text wrapper elements
   const containerRef = useRef<HTMLDivElement>(null);
   const textWrapperRef = useRef<HTMLDivElement>(null);
 
-  // State to keep track of the container's width (for responsive sizing)
   const [containerWidth, setContainerWidth] = useState<number>(0);
 
-  // List of text labels to display on the sphere
   const texts: string[] = [
     "JavaScript",
     "TypeScript",
@@ -44,12 +41,13 @@ export default function Circle(): JSX.Element {
   const initialRotationY = useRef<number>(0);
 
   const autoRotateSpeed = 0.1; // degrees per frame
-
-  // Update container width on mount and on window resize
+  
   useEffect(() => {
+  const container = containerRef.current; 
+  if (!container) return;
     const updateContainerWidth = () => {
-      if (containerRef.current) {
-        setContainerWidth(containerRef.current.offsetWidth);
+      if (container) {
+        setContainerWidth(container.offsetWidth);
       }
     };
     updateContainerWidth();
@@ -59,14 +57,16 @@ export default function Circle(): JSX.Element {
 
   // Mouse events for desktop dragging
   useEffect(() => {
+    const container = containerRef.current; 
+    if (!container) return;
     const onMouseDown = (e: MouseEvent) => {
       isDragging.current = true;
       startX.current = e.clientX;
       startY.current = e.clientY;
       initialRotationX.current = rotationX.current;
       initialRotationY.current = rotationY.current;
-      if (containerRef.current) {
-        containerRef.current.style.cursor = 'grabbing';
+      if (container) {
+        container.style.cursor = 'grabbing';
       }
     };
 
@@ -80,23 +80,31 @@ export default function Circle(): JSX.Element {
 
     const onMouseUp = () => {
       isDragging.current = false;
-      if (containerRef.current) {
-        containerRef.current.style.cursor = 'grab';
+      if (container) {
+        container.style.cursor = 'grab';
       }
     };
 
-    document.addEventListener('mousedown', onMouseDown);
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
+if (container) {
+  container.addEventListener('mousedown', onMouseDown);
+  container.addEventListener('mousemove', onMouseMove);
+  container.addEventListener('mouseup', onMouseUp);
+  container.addEventListener('mouseleave', onMouseUp); 
+}
     return () => {
-      document.removeEventListener('mousedown', onMouseDown);
-      document.removeEventListener('mousemove', onMouseMove);
-      document.removeEventListener('mouseup', onMouseUp);
+    if (container) {
+        container.removeEventListener('mousedown', onMouseDown);
+        container.removeEventListener('mousemove', onMouseMove);
+        container.removeEventListener('mouseup', onMouseUp);
+        container.removeEventListener('mouseleave', onMouseUp);
+}
     };
   }, []);
 
   // Touch events for mobile dragging
   useEffect(() => {
+  const container = containerRef.current; 
+  if (!container) return;
     const onTouchStart = (e: TouchEvent) => {
       isDragging.current = true;
       startX.current = e.touches[0].clientX;
@@ -118,13 +126,18 @@ export default function Circle(): JSX.Element {
       isDragging.current = false;
     };
 
-    document.addEventListener('touchstart', onTouchStart);
-    document.addEventListener('touchmove', onTouchMove, { passive: false });
-    document.addEventListener('touchend', onTouchEnd);
+    if (container) {
+      container.addEventListener('touchstart', onTouchStart);
+      container.addEventListener('touchmove', onTouchMove, { passive: false });
+      container.addEventListener('touchend', onTouchEnd);
+}
     return () => {
-      document.removeEventListener('touchstart', onTouchStart);
-      document.removeEventListener('touchmove', onTouchMove);
-      document.removeEventListener('touchend', onTouchEnd);
+      if (container) {
+        container.removeEventListener('touchstart', onTouchStart);
+        container.removeEventListener('touchmove', onTouchMove);
+        container.removeEventListener('touchend', onTouchEnd);
+}
+
     };
   }, []);
 
