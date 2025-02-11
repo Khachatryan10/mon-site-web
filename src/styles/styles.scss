@@ -31,6 +31,7 @@ a {
     box-shadow: -1px 1px 7px 0px $main-color;
     position: fixed;
     user-select: none;
+    z-index: 2;
 
     ul {
         display: flex;
